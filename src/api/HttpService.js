@@ -6,7 +6,7 @@ let baseURL ="http" + host
 
 let axiosConfig = {
   baseURL,
-  timeout:3000
+  timeout:4000
 }
 
 let instanceTmp = axios.create(axiosConfig)
