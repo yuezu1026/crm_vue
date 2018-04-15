@@ -27,6 +27,7 @@
   button{display:block; width:250px; height:40px; line-height: 40px; margin:0 auto; border:none; background-color:#41b883; color:#fff; font-size:16px; margin-bottom:5px;}
   span{cursor:pointer;}
   span:hover{color:#41b883;}
+  .register-wrap{text-align:center;}
 </style>
 
 <script>
@@ -93,7 +94,8 @@
           alert("请输入用户名或密码")
         }else{
           let data = {'username':this.newUsername,'password':this.newPassword}
-          this.$http.post('http://localhost/vueapi/index.php/Home/user/register',data).then((res)=>{
+            this.$api.post('/reg/register/add', data, res => {
+            debugger
             console.log(res)
             if(res.data == "ok"){
               this.showInfo = "注册成功"

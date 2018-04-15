@@ -21,14 +21,6 @@
         list: []
       }
     },
-  //  mounted(){
-    //  this.$http.get('http://localhost:9008/register/getUsers').then((res)=>{
-    //    debugger;
-    //    this.list = res.data
-    //  })
-    //  debugger;
-
-   // },
     created(){
       this.getData()
     },
