@@ -28,6 +28,25 @@
     background-color: #f60;
     color:#fff;
   }
+
+  .title-cell-class-name-test{
+    background-color: #f60;
+    color:#fff;
+  }
+  .column-cell-class-name-test{
+    background-color: #187;
+  }
+  .column-cell-class-name-test .v-table-body-cell{
+    border-color: #187;
+  }
+  .column-cell-class-name-test2{
+    background-color: #2db7f5;
+    font-weight: bold;
+  }
+  .column-cell-class-name-test2 .v-table-body-cell{
+    border-color: #2db7f5;
+  }
+
 </style>
 <script>
 
@@ -37,32 +56,32 @@
     data(){
       return {
         pageIndex:1,
-        pageSize:2,
+        pageSize:5,
         totalCount:0,
         tableConfig: {
           multipleSort: false,
           tableData: [],
+          titleRows: [
+            [
+              {fields: ['id'], title: 'ID', titleAlign: 'center'},
+              {fields: ['username'], title: '用户名', titleAlign: 'center',titleCellClassName:'title-cell-class-name-test'},
+              {fields: ['password'], title: '密码', titleAlign: 'center'}
+            ]
+          ],
           columns: [
-
             {field: 'id', width: 100, columnAlign: 'center', isFrozen: true},
             {field: 'username', width: 100, columnAlign: 'center', isFrozen: true},
             {field: 'password', width: 90, columnAlign: 'center', isFrozen: false,isResize:true}
-
           ]
         }
       }
     },
     methods:{
       getTableData(){
-
-      // this.tableConfig.tableData = tableDate.slice((this.pageIndex-1)*this.pageSize,(this.pageIndex)*this.pageSize)
-      let url = '/reg/register/findByPage/'+this.pageIndex+'/'+ this.pageSize
-        debugger
-
-       this.$api.get(url, null, r => {
-          debugger
-          this.tableConfig.tableData = r.data
-          this.totalCount = r.count
+        let url = '/reg/register/findByPage/'+this.pageIndex+'/'+ this.pageSize
+        this.$api.get(url, null, res => {
+          this.tableConfig.tableData = res.data
+          this.totalCount = res.count
         })
       },
       pageChange(pageIndex){
