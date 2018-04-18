@@ -21,7 +21,7 @@
         <b-row class="my-1">
           <b-col sm="12">
             <b-button variant="primary" type="submit">登录</b-button>
-            <b-button variant="secondary" click="ToRegister">没有账号？马上注册</b-button>
+            <b-button variant="secondary" v-on:click="ToRegister">没有账号？马上注册</b-button>
           </b-col>
         </b-row>
       </b-form>
@@ -88,6 +88,9 @@
           }
         })
       },
+      ToRegister(){
+        this.$router.push('/register')
+      }
     }
   }
 
