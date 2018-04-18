@@ -24,6 +24,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue);
 
 
+import VueWechatTitle from 'vue-wechat-title';
+Vue.use(VueWechatTitle)
+
+
 
 
 Vue.config.productionTip = false

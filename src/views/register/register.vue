@@ -28,7 +28,7 @@
         <b-row class="my-2">
           <b-col sm="10">
             <b-button variant="primary" type="submit">注册</b-button>
-            <b-button variant="secondary" type="reset">重置</b-button>
+            <b-button variant="danger" type="reset">重置</b-button>
             <b-button variant="secondary" v-on:click="toLogin">已有账号？马上登录</b-button>
 
           </b-col>

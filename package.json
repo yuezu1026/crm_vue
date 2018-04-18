@@ -17,6 +17,7 @@
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-smart-grid": "^1.10.3",
+    "vue-wechat-title": "^2.0.4",
     "vuejs-paginate": "^1.9.0"
   },
   "devDependencies": {
