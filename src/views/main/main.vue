@@ -57,7 +57,7 @@
     data(){
       return {
         pageIndex:1,
-        pageSize:20,
+        pageSize:10,
         totalCount:0,
         tableConfig: {
           multipleSort: false,
