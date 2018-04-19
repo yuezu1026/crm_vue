@@ -1,11 +1,8 @@
 // 配置API接口地址
 //var root = '/api/v1'
-var root = 'http://localhost:10001/api'
+var root = 'http://localhost:10000/api'
 // 引用axios
 var axios = require('axios')
-
-
-
 
 // 自定义判断元素类型JS
 function toType (obj) {
@@ -27,6 +24,7 @@ function filterNull (o) {
   }
   return o
 }
+
 /*
   接口处理函数
   这个函数每个项目都是不一样的，我现在调整的是适用于
@@ -36,7 +34,6 @@ function filterNull (o) {
   主要是，不同的接口的成功标识和失败提示是不一致的。
   另外，不同的项目的处理方法也是不一致的，这里出错就是简单的alert
 */
-
 function apiAxios (method, url, params, success, failure) {
   if (params) {
     params = filterNull(params)
@@ -50,7 +47,6 @@ function apiAxios (method, url, params, success, failure) {
     withCredentials: false
   })
     .then(function (res) {
-      debugger;
       if (res.data.success === true) {
         if (success) {
           success(res.data)
@@ -64,7 +60,6 @@ function apiAxios (method, url, params, success, failure) {
       }
     })
     .catch(function (err) {
-      debugger;
       let res = err.response
       if (err) {
         window.alert('api error, HTTP CODE: ' + res.status)
