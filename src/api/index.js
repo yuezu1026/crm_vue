@@ -1,6 +1,6 @@
 // 配置API接口地址
 //var root = '/api/v1'
-var root = 'http://localhost:10000/api'
+var root = 'http://localhost:10001/api'
 // 引用axios
 var axios = require('axios')
 

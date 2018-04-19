@@ -1,12 +1,90 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+
+<html class="no-js">
+<!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>crm_vue</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SCloud</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./static/assets/img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./static/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Fonts  -->
+    <link rel="stylesheet" href="./static/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/assets/css/simple-line-icons.css">
+    <!-- CSS Animate -->
+    <link rel="stylesheet" href="./static/assets/css/animate.css">
+    <!-- Daterange Picker -->
+    <link rel="stylesheet" href="./static/assets/plugins/daterangepicker/daterangepicker-bs3.css">
+    <!-- Calendar demo -->
+    <link rel="stylesheet" href="./static/assets/css/clndr.css">
+    <!-- Switchery -->
+    <link rel="stylesheet" href="./static/assets/plugins/switchery/switchery.min.css">
+    <!-- Custom styles for this theme -->
+    <link rel="stylesheet" href="./static/assets/css/main.css">
+    <!-- Feature detection -->
+    <script src="./static/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="./static/assets/js/vendor/html5shiv.js"></script>
+    <script src="./static/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
   </head>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <!--Global JS-->
+    <script src="./static/assets/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="./static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./static/assets/plugins/navgoco/jquery.navgoco.min.js"></script>
+    <script src="./static/assets/plugins/pace/pace.min.js"></script>
+    <script src="./static/assets/plugins/fullscreen/jquery.fullscreen-min.js"></script>
+    <script src="./static/assets/js/src/app.js"></script>
+    <!--Page Level JS-->
+    <script src="./static/assets/plugins/countTo/jquery.countTo.js"></script>
+    <script src="./static/assets/plugins/weather/js/skycons.js"></script>
+    <script src="./static/assets/plugins/daterangepicker/moment.min.js"></script>
+    <script src="./static/assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- ChartJS  -->
+    <script src="./static/assets/plugins/chartjs/Chart.min.js"></script>
+    <!-- Morris  -->
+    <script src="./static/assets/plugins/morris/js/morris.min.js"></script>
+    <script src="./static/assets/plugins/morris/js/raphael.2.1.0.min.js"></script>
+    <!-- Vector Map  -->
+    <script src="./static/assets/plugins/jvectormap/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="./static/assets/plugins/jvectormap/js/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- Gauge  -->
+    <script src="./static/assets/plugins/gauge/gauge.min.js"></script>
+    <script src="./static/assets/plugins/gauge/gauge-demo.js"></script>
+    <!-- Calendar  -->
+    <script src="./static/assets/plugins/calendar/clndr.js"></script>
+    <script src="./static/assets/plugins/calendar/clndr-demo.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <!-- Switch -->
+    <script src="./static/assets/plugins/switchery/switchery.min.js"></script>
+    <!--Load these page level functions-->
+    <script>
+      $(document).ready(function() {
+        app.dateRangePicker();
+        app.chartJs();
+        app.weather();
+        app.spinStart();
+        app.spinStop();
+      });
+    </script>
+
   </body>
+
+
+
+
 </html>

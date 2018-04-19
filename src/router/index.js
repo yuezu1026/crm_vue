@@ -20,6 +20,7 @@ import EasyTable8 from '@/views/grid/easyTable8.vue'
 import EasyTable9 from '@/views/grid/easyTable9.vue'
 import EasyTable10 from '@/views/grid/easyTable10.vue'
 
+import BootStrapIndex from '@/bootstrap/index.vue'
 Vue.use(Router)
 
 /*配置路由*/
@@ -105,6 +106,11 @@ export default new Router({
       path: '/easyTable10',
       name: 'easyTable10',
       component: EasyTable10
+    },
+    {
+      path: '/bootstrap/index',
+      name: 'BootStrapIndex',
+      component: BootStrapIndex
     }
   ]
 })
